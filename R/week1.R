@@ -3,13 +3,15 @@
 #' as a part of "Mastering Software Development in R Professional Certificate"
 #' program on Coursera.
 #' -----------------------------------------------------------------------------
+#' WEEK 1 - Clean
+#' -----------------------------------------------------------------------------
 #' for Windows, if you get an error about Java
 # Sys.setenv(JAVA_HOME="C:/Program Files/Common Files/Datawatch/Drivers/7.1.5/jre/bin")
-#' read data: Earthquake Strong Motion Data (1933-1994) by National Centers for
-#' Environmenta Information, NOAA, USA
-#' <https://www.ngdc.noaa.gov/hazard/strong.shtml>
-# path <- "NCEI-strong-motion.xlsx"
-# data <- xlsx::read.xlsx(path, "Sheet1", rowIndex = 13:15685, colIndex = 1:36)
+#' read data: Earthquake Database by National Centers for Environmental
+#' Information, NOAA, USA (1995 - 2000)
+#' <https://www.ngdc.noaa.gov/hazel/view/hazards/earthquake/search>
+# data <- utils::read.delim("earthquakes.tsv")
+# data <- data[-1,]
 # ---------------------------------------------------------------------------- #
 #' Clean earthquake data
 #' This function cleans the earthquake data retrieved from NOAA database. It
@@ -23,10 +25,10 @@
 #' @examples
 #' \dontrun{eq_clean_data(data)}
 eq_clean_data <- function(data){
-  data["Date"] <- as.Date(paste(unlist(data["Year"]), unlist(data["Mo"]),
-                                unlist(data["Dy"]), sep="-"))
-  data["Latitude"] <- as.numeric(unlist(data["Latitude"]))
-  data["Longitude"] <- as.numeric(unlist(data["Longitude"]))
+  data$Date <- as.Date(paste(data$Year, data$Mo,data$Dy, sep="-"),
+                          "%Y-%m-%d")
+  data$Latitude <- as.numeric(data$Latitude)
+  data$Longitude <- as.numeric(data$Longitude)
   return(data)
 }
 # ---------------------------------------------------------------------------- #
@@ -43,7 +45,8 @@ eq_clean_data <- function(data){
 #' @examples
 #' \dontrun{eq_location_clean(data)}
 eq_location_clean <- function(data){
-  data["Location_Name"] <- stringr::str_to_title(as.character(unlist(data["Country.1"])))
-  data["Location_Name"][data["Location_Name"]=="Usa"] <- "USA"
+  data$Country <- sub("\\:.*", "", data$Location.Name)
+  data$Location.Name <- stringr::str_remove(data$Location.Name, paste0(data$Country,": "))
+  data$Location.Name <- stringr::str_to_title(data$Location.Name)
   return(data)
 }

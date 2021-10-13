@@ -1,6 +1,6 @@
 Package: mycapstone
 Type: Package
-Title: Analysis of eartquake data
+Title: Analysis of earthquake data
 Version: 0.1.0
 Author: Cemre Yilmaz <cemre.yilmaz@uni-graz.at>
 Maintainer: Cemre Yilmaz <cemre.yilmaz@uni-graz.at>
@@ -18,3 +18,5 @@ Suggests:
     knitr,
     xlsx
 VignetteBuilder: knitr
+URL: https://github.com/cemreyilmaz/mycapstone
+BugReports: https://github.com/cemreyilmaz/mycapstone/issues

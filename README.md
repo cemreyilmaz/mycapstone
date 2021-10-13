@@ -26,7 +26,7 @@ This is a basic example which shows you how to clean your data:
 ``` r
 library(mycapstone)
 ## basic example code
-data <- xlsx::read.xlsx("NCEI-strong-motion.xlsx", "Sheet1", 
-                        rowIndex = 13:15685, colIndex = 1:36)
+data <- utils::read.delim("earthquakes.tsv")
 data <- eq_clean_data(data)
+data <- eq_location_clean(data)
 ```
