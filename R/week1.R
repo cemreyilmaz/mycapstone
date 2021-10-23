@@ -5,11 +5,11 @@
 #' -----------------------------------------------------------------------------
 #' WEEK 1 - Clean
 #' -----------------------------------------------------------------------------
-#' for Windows, if you get an error about Java
+# for Windows, if you get an error about Java
 # Sys.setenv(JAVA_HOME="C:/Program Files/Common Files/Datawatch/Drivers/7.1.5/jre/bin")
-#' read data: Earthquake Database by National Centers for Environmental
-#' Information, NOAA, USA (1995 - 2000)
-#' <https://www.ngdc.noaa.gov/hazel/view/hazards/earthquake/search>
+# read data: Earthquake Database by National Centers for Environmental
+# Information, NOAA, USA (1995 - 2000)
+# <https://www.ngdc.noaa.gov/hazel/view/hazards/earthquake/search>
 # data <- utils::read.delim("earthquakes.tsv")
 # data <- data[-1,]
 # ---------------------------------------------------------------------------- #
