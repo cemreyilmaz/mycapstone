@@ -9,10 +9,6 @@ program on Coursera.
 -----------------------------------------------------------------------------
 WEEK 1 - Clean
 -----------------------------------------------------------------------------
-for Windows, if you get an error about Java
-read data: Earthquake Database by National Centers for Environmental
-Information, NOAA, USA (1995 - 2000)
-<https://www.ngdc.noaa.gov/hazel/view/hazards/earthquake/search>
 Clean earthquake data
 This function cleans the earthquake data retrieved from NOAA database. It
 uses the archived data including the records dated before 1995.}
@@ -33,10 +29,6 @@ program on Coursera.
 -----------------------------------------------------------------------------
 WEEK 1 - Clean
 -----------------------------------------------------------------------------
-for Windows, if you get an error about Java
-read data: Earthquake Database by National Centers for Environmental
-Information, NOAA, USA (1995 - 2000)
-<https://www.ngdc.noaa.gov/hazel/view/hazards/earthquake/search>
 Clean earthquake data
 This function cleans the earthquake data retrieved from NOAA database. It
 uses the archived data including the records dated before 1995.

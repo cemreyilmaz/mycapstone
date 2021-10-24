@@ -39,6 +39,7 @@ eq_clean_data <- function(data){
 #' @param data data.frame -- the earthquake data base by NOAA (USA)
 #'
 #' @return data.frame
+#' @importFrom stringr str_remove
 #' @importFrom stringr str_to_title
 #' @export
 #'

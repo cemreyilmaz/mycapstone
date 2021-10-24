@@ -14,6 +14,7 @@
 #' indicates the number of deaths in each occurrence.
 #'
 #' @param data data.frame -- the earthquake data base by NOAA (USA)
+#' @import ggplot2
 #'
 #' @return ggplot
 #' @export
@@ -45,6 +46,8 @@ geom_timeline <- function(data){
 #'
 #' @param data data.frame
 #' @param n_max numeric
+#' @import ggplot2
+#' @import ggrepel
 #'
 #' @return ggplot
 #' @export
