@@ -1,5 +1,7 @@
 ---
-output: github_document
+output: 
+  html_document:
+    keep_md: true
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -30,14 +32,43 @@ You can install the released version of mycapstone from [CRAN](https://CRAN.R-pr
 install.packages("mycapstone")
 ```
 
-## Example
+## Example_clean
 
 This is a basic example which shows you how to clean your data:
 
-```{r example}
+```{r example_clean}
 library(mycapstone)
 ## basic example code
 data <- utils::read.delim("earthquakes.tsv")
 data <- eq_clean_data(data)
 data <- eq_location_clean(data)
+```
+
+## Example_visualize
+
+This is a basic example which shows you how to visualize your data:
+
+```{r example_visual}
+library(mycapstone)
+## basic example code
+data <- utils::read.delim("earthquakes.tsv")
+data <- eq_clean_data(data)
+data <- eq_location_clean(data)
+data <- dplyr::filter(data, Country == "TURKEY")
+geom_timeline_label(data,7.5)
+```
+
+## Example_map
+
+This is a basic example which shows you how to create an interactive map from your data:
+
+```{r example_map}
+library(mycapstone)
+## basic example code
+data <- utils::read.delim("earthquakes.tsv")
+data <- eq_clean_data(data)
+data <- eq_location_clean(data)
+data <- dplyr::filter(data, Country == "TURKEY")
+data <- dplyr::mutate(data, popup_text = eq_create_label(data))
+eq_map(data, "popup_text")
 ```

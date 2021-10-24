@@ -7,8 +7,8 @@
 #' -----------------------------------------------------------------------------
 # data <- utils::read.delim("earthquakes.tsv")
 # data <- eq_location_clean(eq_clean_data(data[-1,]))
-# data <- dplyr::filter(data, Country == "MEXICO" &
-#                         lubridate::year(Date) >= 2000)
+# data <- dplyr::filter(data, Country == "TURKEY" &
+#                         lubridate::year(Date) >= 1999)
 # ---------------------------------------------------------------------------- #
 #' Interactive map with a pop-up date
 #' This function creates an interactive map to show the geographical locations
