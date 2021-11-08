@@ -19,7 +19,8 @@ Imports:
 Suggests: 
     rmarkdown,
     knitr,
-    xlsx
+    xlsx,
+    testthat
 VignetteBuilder: knitr
 URL: https://github.com/cemreyilmaz/mycapstone
 BugReports: https://github.com/cemreyilmaz/mycapstone/issues

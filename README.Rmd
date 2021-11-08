@@ -18,6 +18,7 @@ knitr::opts_chunk$set(
 # mycapstone
 
 <!-- badges: start -->
+[![Travis build status](https://travis-ci.com/cemreyilmaz/mycapstone.svg?branch=master)](https://travis-ci.com/cemreyilmaz/mycapstone)
 <!-- badges: end -->
 
 The goal of mycapstone is to analyze the earthquake data that were collected and 
