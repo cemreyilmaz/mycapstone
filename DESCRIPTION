@@ -7,7 +7,7 @@ Maintainer: Cemre Yilmaz <cemre.yilmaz@uni-graz.at>
 Description: This is my capstone project in the specialization program of
     "Mastering Software Development in R Professional Certificate" by
     Roger D. Peng and Brooke Anderson on Coursera.
-License: GPL-3
+License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.2
